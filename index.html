@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Carbon Quest</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <div style="text-align:center; margin:10px;">
+  <button onclick="setMode('monthly')">Monthly</button>
+  <button onclick="setMode('yearly')">Yearly</button>
+</div>
+
+</head>
+<body>
+
+<h1><bold>🌍 Carbon Quest Dashboard</bold></h1>
+
+<div class="dashboard">
+
+  <div class="card">
+    <h3>💡 Electricity (kWh)</h3>
+    <input type="range" min="0" max="500" id="electricity" oninput="updateValues()">
+    <span id="elecVal">0</span>
+  </div>
+
+  <div class="card">
+    <h3>🚗 Car Travel (km)</h3>
+    <input type="range" min="0" max="1000" id="car" oninput="updateValues()">
+    <span id="carVal">0</span>
+  </div>
+
+  <div class="card">
+    <h3>🔥 LPG (kg)</h3>
+    <input type="range" min="0" max="50" id="lpg" oninput="updateValues()">
+    <span id="lpgVal">0</span>
+  </div>
+
+</div>
+
+<button onclick="calculate()">🚀 Calculate My Impact</button>
+
+<div class="charts">
+  <canvas id="pieChart"></canvas>
+</div>
+
+<div id="summary"></div>
+<div id="reward"></div>
+<div id="tips"></div>
+<div id="impact"></div>
+
+<script src="script.js"></script>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+    🎉 <b>Achievement Unlocked!</b><br>
+    🌿 Eco Saver Badge Earned!
+    <br><br>
+    <button onclick="closePopup()">OK</button>
+  </div>
+</div>
+
+<div class="wide-card">
+  <h3>🏆 Leaderboard</h3>
+  <table class="leaderboard">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>User</th>
+        <th>Points</th>
+      </tr>
+    </thead>
+    <tbody id="leaderboardBody"></tbody>
+  </table>
+</div>
+
+
+</body>
+</html>
