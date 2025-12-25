@@ -5,8 +5,8 @@ The platform combines visual dashboards, eco-friendly tips, rewards, badges, and
 # Team Details
 Team Name: Runtime Terrors  
 Team Members: 
+- Dillikar Rohini
 - Nikesh Munnurkapu  
-- Dillikar Rohini  
 
 # Problem Statement
 Climate change is accelerating due to increasing carbon emissions from daily human activities such as transportation, electricity usage, and lifestyle
